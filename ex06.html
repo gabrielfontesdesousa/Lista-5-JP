@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX06</title>
+</head>
+<body>
+
+    <input type="text" id="ipt_notaAluno">
+    <input type="text" id="ipt_frequencia">
+    <button onclick="avaliar()">Avaliar aluno</button>
+
+    <script>
+        function avaliar(){
+            var nota = Number(ipt_notaAluno.value)
+            var frequencia = Number(ipt_frequencia.value)
+            if (nota > 6 && frequencia > 75){
+                alert("Parabens, aprovado")
+            }
+            else{
+                alert("Infelizmente não foi dessa vez! ")
+            }
+        }
+
+    </script>
+    <!--
+    
+    6. Aprovação Escolar: Notas e Frequência Fazem a Diferença!
+Crie um programa o qual:  
+
+a) Pergunte uma nota de um aluno  
+
+b) Pergunte a frequência de um aluno  
+
+c) Ao clicar em "Avaliar aluno"...  
+
+d) Caso a nota for a partir de 6 e a frequência for a partir de 75, exibir um alert com a frase "Parabéns! Aprovado!", caso contrário, exibir um alert com "Infelizmente, não foi desta vez"  
+
+
+    -->
+</body>
+</html>

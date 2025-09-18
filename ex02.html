@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX02</title>
+</head>
+<body>
+    <input type="number" name="" id="ipt_renda" placeholder="renda: ">
+    <input type="number" name="" id="ipt_rendaTotal" placeholder="Renda total: ">
+    <button onclick="verificarAjuda()">Verificar ajuda</button>
+
+    <script>
+        function verificarAjuda(){
+            renda = Number(ipt_renda.value)
+            rendaFam = Number(ipt_rendaTotal.value)
+            if (renda < 1050 && renda > 0 && rendaFam > 0 && rendaFam <= 2100){
+                alert("Vc terá direito")
+            }
+            else{
+                alert("Vc Não terá direito")
+            }
+        }
+
+
+    </script>
+    <!--
+    2. Auxílio Covid-19: Você Tem Direito ao Benefício?
+    Crie um programa que avaliará se uma pessoa tem direito à ajuda do governo na crise do Covid19:  
+
+    a) Solicite renda do usuário  
+
+    b) Solicite a renda total familiar do usuário  
+
+    c) Ao clicar em "Verificar ajuda", exibe um alert com uma dessas mensagens  
+
+       "Você terá direito!", caso a renda do usuário for até 1050 e a renda familiar for até 2100.  
+
+       "Você NÃO terá direito", caso contrário  
+    -->
+</body>
+</html>

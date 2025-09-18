@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX08</title>
+</head>
+<body>
+    <input type="text" id="ipt_loginUser">
+    <input type="text" id="ipt_senha">
+    <input type="text" id="ipt_cod">
+    <button onclick="Logar()">Entrar</button>
+    <script>
+        function Logar(){
+            var loginUser = ipt_loginUser.value
+            var senha = ipt_senha.value
+            var cod = ipt_cod.value
+
+            if (loginUser == "SPTech" && senha == "digital" && cod == "123"){
+                alert("Usuario autenticado com sucesso")
+            }
+            else {
+                alert("Falha na autenticação")
+            }
+
+        }
+
+
+    </script>
+    <!--
+    8. Login Seguro: Verificação em Duas Etapas!
+Crie um programa que simula um pequeno sistema de login assim:  
+
+a) Pergunte o login do usuário; 
+b) Pergunte a senha do usuário; 
+
+c) Pergunte o código de segurança do usuário (é como se fosse uma segunda senha, só isso)  
+
+d) Ao clicar em "Entrar": 
+
+   Caso o login seja "SPTech" e a senha seja "digital" e o código de segurança seja "123", exibir um alert com a frase "Usuário autenticado com sucesso" 
+
+   Caso contrário, exibir um alert com "Falha na autenticação"  
+
+
+    -->
+</body>
+</html>

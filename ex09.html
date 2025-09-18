@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX09</title>
+</head>
+<body>
+    <input type="text" id="ipt_altura" placeholder="altura:  ">
+
+    <input type="text" id="ipt_nome" placeholder="nome: ">
+    <input type="text" id="ipt_inicio" placeholder="inicio intervalo altura: ">
+    <input type="text" id="ipt_fim" placeholder="fim intervalo altura: ">
+    <button onclick="verificarCandidato()">Verificar candidato</button>
+    <div id="response"></div>
+    <script>
+        function verificarCandidato(){
+            var altura = Number(ipt_altura.value)
+            var inicio = Number(ipt_inicio.value)
+            var nome = ipt_nome.value
+            var final = Number(ipt_fim.value)
+            if (inicio < 1 || final < inicio ){
+                alert("Altura de intervalo de altura inválida")
+            }
+            else if(altura >= inicio && altura <= final){
+                response.innerHTML = ` O candidato ${nome}, com altura de ${altura} metros, participará do processo de seleção de piloto.<br>`
+                response.innerHTML += ` O candidato ${nome}, com altura de ${altura} metros, tem a altura válida `
+
+            }   
+            else{
+                response.innerHTML = `Infelizmente, o candidato ${nome}, com altura de ${altura} metros, não atende os requisitos da seleção.`
+            }
+        }
+    </script>
+    <!--
+
+    9. Seleção de Pilotos: Você Tem a Altura Ideal?
+Você foi contratado pela empresa Pilottus para auxiliar na criação de um processo seletivo para pilotos de carros de corrida.  
+
+No processo seletivo, existe um intervalo de altura mínima e máxima para os pilotos se candidatarem, a ser definida pelo recrutador. 
+
+Para se candidatar, o piloto deve ter uma altura que esteja dentro do intervalo solicitado pelo recrutador no processo seletivo, senão, será desclassificado. 
+
+Para auxiliar o recrutador da empresa, crie um programa o qual:  
+
+a) Solicite o intervalo da altura desejada para os pilotos do processo seletivo (altura inicial e altura final de seleção) 
+
+b) Solicite o nome e a altura do candidato a piloto 
+
+c) Ao clicar no botão “Verificar Candidato”, deve verificar se a altura inicial da seleção é maior que 1 e se a altura final da seleção é maior que a altura inicial 
+
+   c1) Caso a altura inicial ou a altura final da seleção sejam inválidas, emitir alerta com a mensagem "Intervalo da altura de seleção é inválida! A altura inicial deve ser maior que 1 e a altura final deve ser maior que a altura inicial” e NÃO FAÇA MAIS NADA 
+
+   c2) Caso a altura inicial e final da seleção sejam válidas, exibir na página uma das duas mensagens abaixo, sem apagar as mensagens anteriores:  
+
+      “O candidato XXXXX, com altura de 9.99 metros, participará do processo de seleção de piloto”, caso a altura do candidato esteja no intervalo informado.  
+
+      “Infelizmente, o candidato XXXXX, com altura de 9.99 metros, não atende os requisitos da seleção”, caso a altura do candidato NÃO esteja no intervalo informado. 
+
+OBS: Primeiro deve validar o intervalo de altura para o processo seletivo (a altura mínima e máxima), verificando se são entradas válidas. Caso sejam entradas válidas, deve verificar também se a altura do piloto está dentro do intervalo informado, para se candidatar. 
+
+ 
+    
+    -->
+
+</body>
+</html>
