@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex03</title>
+</head>
+<body>
+    <input type="number" id="ipt_renda_ind" placeholder="Renda individual">
+    <input type="number" id="ipt_renda_fam" placeholder="Renda familiar">
+    <button onclick="beneficio()">Terei o benefício</button>
+
+    <script>
+        function beneficio(){
+            var rendaInd = Number(ipt_renda_ind.value)
+            var rendaFam = Number(ipt_renda_fam.value)
+
+            if(rendaInd <= 2000 || rendaFam <= 3000){
+                alert("Você terá direito ao auxílio")
+            } else {
+                alert("Sem direito ao auxílio")
+            }
+        }
+    </script>
+
+    <!--
+3. Auxílio Emergencial Covid-19
+Crie um programa o qual ajudará o governo a saber se ele dará a ajuda emergencial ao Covid19 a um cidadão:
+
+a) Solicite o valor da renda individual do usuário
+
+b) Solicite o valor da renda familiar do usuário
+
+c) Ao clicar em "Terei o benefício", podem aparecer as seguintes mensagens:
+
+   "Você terá direito ao auxílio", caso renda individual for até 2000 ou caso a renda familiar for até 3000
+
+   "Sem direito ao auxílio", caso contrário    -->
+</body>
+</html>
