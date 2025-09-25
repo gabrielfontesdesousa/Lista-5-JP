@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex03</title>
+</head>
+<body>
+        <select name="" id="tipoPassageiro">
+            <option value="Comum">Comum</option>
+            <option value="Estudante">Estudante</option>
+            <option value="Idoso/PNE">Idoso/PNE</option>
+        </select>
+
+        <select name="" id="tipoPassagem">
+            <option value="Passagem unica">Passagem unica</option>
+            <option value="Integração">Passagem integração</option>
+        </select>
+        <button onclick="simula()">Simular preço</button>
+        <div id="response"></div>
+        <script>
+            function simula(){
+                var vlPassagem = 0;
+                var tipo = tipoPassageiro.value;
+                var Passagem = tipoPassagem.value;
+                if (tipo == "Estudante" && Passagem == "Passagem unica"){
+                    vlPassagem = 4.40 / 2
+                    response.innerHTML = `Valor da passagem escolhida: R$${vlPassagem.toFixed(2)}`
+
+                }
+                else if (tipo == "Estudante" && Passagem == "Integração"){
+                    vlPassagem = 5.90 / 2
+                    response.innerHTML = `Valor da passagem escolhida: R$${vlPassagem.toFixed(2)}`
+
+                }
+                else if (tipo == "Idoso/PNE" ){
+                    vlPassagem = 0
+                    response.innerHTML = `Valor da passagem escolhida: R$${vlPassagem.toFixed(2)}`
+                }
+                else if (tipo == "Comum" && Passagem == "Integração"){
+                    vlPassagem = 5.90
+                    response.innerHTML = `Valor da passagem escolhida: R$${vlPassagem.toFixed(2)}`
+
+                }
+                else if (tipo == "Comum" && Passagem == "Passagem unica"){
+                    vlPassagem = 4.40
+                    response.innerHTML = `Valor da passagem escolhida: R$${vlPassagem.toFixed(2)}`
+
+                }
+            }
+
+
+            
+            </script>
+
+
+
+
+    
+</body>
+</html>

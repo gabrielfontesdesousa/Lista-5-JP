@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex04</title>
+</head>
+<body>
+    <input type="text" id="input1" placeholder="login: ">
+    <input type="text" id="input2" placeholder="senha: ">
+    <input type="text" id="input3" placeholder="info: ">
+    <button onclick="autenticar()">Autenticar</button>
+    <div id="response"></div>
+</body>
+<script>
+
+    function autenticar(){
+        var login = input1.value
+        var senha = input2.value
+        var info  =  input3.value
+
+    if (login == "ana" && senha == "braga" && (info == "1949" || info == "louro josé")){
+        response.innerHTML = `Usuário autenticado`
+    }
+    else{
+        response.innerHTML = `Falha na autenticação`
+
+    }
+    }
+</script>
+
+<!--
+4. Autenticação Segura: Acesso ao Banco Melete
+Um novo banco eletrônico, o Banco Melete possui um sistema diferenciado de autenticação no qual pede um login, uma senha e uma 3ª informação pessoal, que pode ser o ano de nascimento ou o nome do animal de estimação do cliente. Crie um protótipo que simule a autenticação de um determinado cliente, o qual: 
+
+a) Solicite o login, a senha e a informação pessoal ao usuário 
+
+b) Ao clicar num botão "Autenticar", exiba uma dessas frases abaixo do botão: 
+
+     b.1.) "Usuário autenticado", caso o login seja "ana", a senha "braga" e a informação pessoal for ou "1949" ou "louro josé" 
+
+     b.2.) "Falha na autenticação", caso as regras de verificação em b.1) falhem 
+
+  
+-->
+</html>

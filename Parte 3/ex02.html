@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex02</title>
+</head>
+<body>
+    <input type="text" id="input1" placeholder="Tamanho do celular: ">
+    <select name="" id="selectCor">
+        <option value="Preto">Preto</option>
+        <option value="Prata">Prata</option>
+        <option value="">Azul</option>
+        <option value="">Vermelho</option>
+    </select>
+    <button onclick="sera()">Será que ele gosta?</button>
+    <br><br>
+    <div id="response"></div>
+    <script>
+        function sera(){
+            var tam = Number(input1.value)
+            var cor = selectCor.value
+            if (tam > 6.5 && (cor == 'Preto' || cor == 'Prata')){
+                response.innerHTML = `<img src="https://st2.depositphotos.com/4196725/7505/i/450/depositphotos_75058549-stock-photo-cool-happy-man.jpg" alt=""/>`
+            }
+            else {
+                response.innerHTML = `<img src="https://www.publicdomainpictures.net/pictures/20000/nahled/sad-man-and-rain.jpg" alt=""/>`
+            }
+        }
+    </script>
+</body>
+</html>
+<!--
+2. Simulador de Preferências de Compras: Será que Robervaldo Gostaria?
+Imagine que Robervaldo está buscando um novo celular. Ele tem algumas preferências específicas para a escolha de modelo.
+
+Robervaldo prefere celulares com tela grande (acima de 6.5 polegadas) e que sejam da cor preta ou prata.
+
+Com base nessas informações, crie um simulador no qual:
+
+a) Solicite o tamanho da tela do celular encontrado.
+
+b) Solicite a cor do celular encontrado, dentre as opções:
+
+Preto
+Prata
+Azul
+Vermelho
+c) Ao clicar em "Será que ele gosta?", mostre, abaixo:
+
+A imagem de uma pessoa feliz, caso as características do celular coincidam com as preferências de Robervaldo.
+Ou a imagem de uma pessoa decepcionada, caso contrário.  
+ 
+-->
